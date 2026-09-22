@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /_вихідні-файли/
+
+Sitemap: https://lawpotiatynnyk.ua/sitemap.xml

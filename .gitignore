@@ -1,0 +1,9 @@
+# Original photos and stock clipart — never published, kept locally only.
+_вихідні-файли/
+
+# local dev-preview config (points at a machine-specific temp script)
+.claude/
+
+# OS/editor cruft
+Thumbs.db
+.DS_Store
