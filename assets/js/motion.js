@@ -129,15 +129,13 @@
 
   $$('[data-reveal="img"]').forEach(function (fig) {
     var img = $('.about__photo-fg', fig) || $('img', fig);
-    gsap.set(fig, { '--cv': 1 });
+    gsap.set(fig, { autoAlpha: 0, y: 24 });
+    gsap.set(img, { scale: 1.06 });
     ST.create({
-      trigger: fig, start: 'top 85%', once: true,
-      onEnter: function () {
-        gsap.to(fig, { '--cv': 0, duration: 1.4, ease: 'expo.inOut' });
-        gsap.fromTo(img, { scale: 1.18 }, { scale: 1, duration: 2, ease: ease });
-      }
+      trigger: fig, start: 'top 88%', once: true,
+      onEnter: function () { gsap.to(fig, { autoAlpha: 1, y: 0, duration: 1.1, ease: ease }); gsap.to(img, { scale: 1, duration: 1.6, ease: ease }); }
     });
-    gsap.fromTo(img, { yPercent: -7 }, { yPercent: 0, ease: 'none', scrollTrigger: { trigger: fig, start: 'top bottom', end: 'bottom top', scrub: true } });
+    gsap.fromTo(img, { yPercent: -6 }, { yPercent: 0, ease: 'none', scrollTrigger: { trigger: fig, start: 'top bottom', end: 'bottom top', scrub: true } });
   });
 
   /* ---------- hero ---------- */

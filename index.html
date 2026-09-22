@@ -84,13 +84,14 @@
 <div class="preloader" aria-hidden="true">
   <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
     <circle cx="60" cy="60" r="55" pathLength="1" style="--d:0s" stroke-width="1"/>
-    <path d="M27 42v38" pathLength="1" style="--d:.15s"/>
-    <path d="M27 61h9" pathLength="1" style="--d:.3s"/>
-    <ellipse cx="47" cy="61" rx="11" ry="19" pathLength="1" style="--d:.35s"/>
-    <path d="M71 80V42" pathLength="1" style="--d:.45s"/>
-    <path d="M93 80V42" pathLength="1" style="--d:.5s"/>
-    <path d="M64 42h36" pathLength="1" style="--d:.6s"/>
-    <path d="M82 42v-9" pathLength="1" style="--d:.75s"/>
+    <circle cx="60" cy="27" r="2.3" pathLength="1" style="--d:.1s" fill="currentColor" stroke="none"/>
+    <path d="M60 29.5V44" pathLength="1" style="--d:.2s"/>
+    <path d="M34 44H86" pathLength="1" style="--d:.35s"/>
+    <circle cx="60" cy="44" r="2" pathLength="1" style="--d:.45s" fill="currentColor" stroke="none"/>
+    <path d="M34 44V66" pathLength="1" style="--d:.5s"/>
+    <path d="M86 44V66" pathLength="1" style="--d:.55s"/>
+    <path d="M23 66q11 13 22 0" pathLength="1" style="--d:.7s"/>
+    <path d="M75 66q11 13 22 0" pathLength="1" style="--d:.75s"/>
   </svg>
   <p class="preloader__label" data-i18n="preloader">Потятинник · адвокат</p>
 </div>
@@ -117,7 +118,7 @@
       <a href="#faq" data-i18n="nav.faq">Питання</a>
       <a href="#contact" data-i18n="nav.contact">Контакти</a>
       <div class="nav__extra">
-        <a class="nav__phone" href="tel:+380687263833">068 726 38 33</a>
+        <a class="nav__phone" href="tel:+380687263833">+380 68 726 38 33</a>
         <span data-i18n="nav.extra">Дзвінки, Telegram, Viber, WhatsApp</span>
       </div>
     </nav>
@@ -198,7 +199,7 @@
       <p class="hero__lead" data-hero data-i18n="hero.lead">Цивільні, кримінальні та сімейні справи. Документи на будинок і землю, свідоцтва РАЦС, апостиль і переклади.</p>
       <div class="hero__actions" data-hero>
         <a class="btn btn--gold" href="#contact" data-magnetic><span data-i18n="cta.consult">Записатися на консультацію</span><svg class="btn__arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
-        <a class="btn btn--line" href="tel:+380687263833" data-magnetic><svg class="btn__arrow" aria-hidden="true"><use href="#i-phone"/></svg><span>068 726 38 33</span></a>
+        <a class="btn btn--line" href="tel:+380687263833" data-magnetic><svg class="btn__arrow" aria-hidden="true"><use href="#i-phone"/></svg><span>+380 68 726 38 33</span></a>
       </div>
       <ul class="hero__facts" data-hero>
         <li data-i18n="hero.f1">Суддя у відставці</li>
@@ -296,7 +297,7 @@
       <div class="abroad__head">
         <div>
           <p class="eyebrow" data-reveal data-i18n="abroad.eyebrow">§ 03 — Українцям за кордоном</p>
-          <h2 class="h2" id="abroad-title" data-split data-i18n="abroad.title">Ви в Польщі, Італії чи Канаді. Справа — в Україні.</h2>
+          <h2 class="h2" id="abroad-title" data-split data-i18n="abroad.title">Ви живете в Польщі, Італії чи Канаді, а ваша справа — в Україні.</h2>
         </div>
         <p class="lead" data-reveal data-i18n="abroad.lead">Приїжджати не обов’язково. Більшість питань я веду дистанційно, а вас тримаю в курсі в месенджері.</p>
       </div>
@@ -483,7 +484,7 @@
       <div class="faq__head">
         <p class="eyebrow" data-reveal data-i18n="faq.eyebrow">§ 09 — Питання</p>
         <h2 class="h2" id="faq-title" data-split data-i18n="faq.title">Про що питають перед першою зустріччю</h2>
-        <p class="faq__more" data-reveal><span data-i18n="faq.more">Не знайшли відповіді? Зателефонуйте:</span> <a class="u-link gold" href="tel:+380687263833">068 726 38 33</a></p>
+        <p class="faq__more" data-reveal><span data-i18n="faq.more">Не знайшли відповіді? Зателефонуйте:</span> <a class="u-link gold" href="tel:+380687263833">+380 68 726 38 33</a></p>
       </div>
       <div class="faq__list">
         <details class="qa" data-reveal><summary><span class="qa__n" data-i18n="faq.n1">Питання 1</span><span class="qa__q" data-i18n="faq.q1">Скільки коштує консультація?</span><span class="qa__icon" aria-hidden="true"></span></summary><div class="qa__a"><p data-i18n="faq.a1">Залежить від справи. Суму я називаю під час першої розмови, до початку роботи, і фіксую її в договорі.</p></div></details>
@@ -517,8 +518,8 @@
         <h2 class="h2" id="contact-title" data-split data-i18n="contact.title">Розкажіть, що сталося</h2>
         <p class="lead" data-reveal data-i18n="contact.lead">Перша розмова ні до чого вас не зобов’язує. Залиште номер, і я передзвоню в робочий час.</p>
         <dl class="contact__list" data-reveal>
-          <div><dt data-i18n="contact.phone1">Телефон · дзвінки й месенджери</dt><dd><a class="contact__phone" href="tel:+380687263833">068 726 38 33</a></dd></div>
-          <div><dt data-i18n="contact.phone2">Додатковий номер</dt><dd><a class="contact__phone contact__phone--sm" href="tel:+380667427219">066 742 72 19</a></dd></div>
+          <div><dt data-i18n="contact.phone1">Телефон · дзвінки й месенджери</dt><dd><a class="contact__phone" href="tel:+380687263833">+380 68 726 38 33</a></dd></div>
+          <div><dt data-i18n="contact.phone2">Додатковий номер</dt><dd><a class="contact__phone contact__phone--sm" href="tel:+380667427219">+380 66 742 72 19</a></dd></div>
           <div><dt data-i18n="contact.email">Пошта</dt><dd><a class="u-link" href="mailto:urapotya@ukr.net">urapotya@ukr.net</a></dd></div>
           <div><dt data-i18n="contact.addr">Офіс</dt><dd data-i18n="contact.addrV">м. Коломия, вул. Гетьманська, 3Е</dd></div>
           <div><dt data-i18n="contact.hours">Графік</dt><dd data-i18n="contact.hoursV">Пн–Пт з 9:00, за попереднім записом</dd></div>
@@ -571,7 +572,7 @@
           <svg class="form-done__mark" aria-hidden="true"><use href="#i-mono"/></svg>
           <div class="form-done__direct">
             <p class="form-done__title" data-i18n="form.okTitle">Дякую, заявку отримано</p>
-            <p data-i18n="form.okText">Я зателефоную вам у робочий час. Якщо справа термінова, дзвоніть: 068 726 38 33.</p>
+            <p data-i18n="form.okText">Я зателефоную вам у робочий час. Якщо справа термінова, дзвоніть: +380 68 726 38 33.</p>
           </div>
           <div class="form-done__handoff">
             <p class="form-done__title" data-i18n="form.hoTitle">Заявку сформовано</p>
@@ -603,8 +604,8 @@
         <a class="u-link" href="#faq" data-i18n="nav.faq">Питання</a>
       </nav>
       <div class="footer__contacts">
-        <a class="u-link" href="tel:+380687263833">068 726 38 33</a>
-        <a class="u-link" href="tel:+380667427219">066 742 72 19</a>
+        <a class="u-link" href="tel:+380687263833">+380 68 726 38 33</a>
+        <a class="u-link" href="tel:+380667427219">+380 66 742 72 19</a>
         <a class="u-link" href="mailto:urapotya@ukr.net">urapotya@ukr.net</a>
       </div>
       <div class="footer__lang lang" role="group" aria-label="Мова сайту" data-i18n-attr="aria-label:a11y.lang">
@@ -639,9 +640,9 @@
 <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="assets/vendor/lenis.min.js" defer></script>
 <script src="assets/vendor/split-type.min.js" defer></script>
-<script src="assets/i18n/i18n.js?v=2" defer></script>
+<script src="assets/i18n/i18n.js?v=3" defer></script>
 <script src="assets/js/scales.js?v=2" defer></script>
-<script src="assets/js/motion.js?v=3" defer></script>
+<script src="assets/js/motion.js?v=4" defer></script>
 <script src="assets/js/main.js?v=2" defer></script>
 </body>
 </html>
