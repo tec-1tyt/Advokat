@@ -370,7 +370,7 @@
 
   document.addEventListener('click', function (e) {
     var b = e.target.closest('[data-lang]');
-    if (b && b.getAttribute('data-lang') !== current) apply(b.getAttribute('data-lang'));
+    if (b) apply(b.getAttribute('data-lang'));
   });
 
   var q = (location.search.match(/[?&]lang=(en|uk)/) || [])[1];
