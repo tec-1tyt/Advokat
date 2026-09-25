@@ -186,15 +186,19 @@
   /* A viewport resize can make gsap.matchMedia() run this callback again before the previous
      context is fully torn down, leaving two ScrollTriggers pinned to the same section. Two
      pins fighting over one element is exactly what produces "stuck, can't scroll past this
-     part" — so always kill any earlier one first; at most one may exist. */
+     part" — so always kill any earlier one first; at most one may exist.
+     Killing by "trigger has class .cases" also caught the unrelated weight-counter
+     ScrollTrigger from the [data-weight] loop above (the .cases section itself carries
+     data-weight), silently breaking the "план дій" scale weight — so target this pin's own
+     id instead of matching by trigger class. */
   mm.add('(min-width: 1100px)', function () {
-    /* t.vars.trigger is the original selector only until GSAP resolves it to the live element
-       (which can happen before this runs again), so compare against t.trigger, not t.vars.trigger. */
-    ScrollTrigger.getAll().forEach(function (t) { if (t.trigger && t.trigger.classList && t.trigger.classList.contains('cases')) t.kill(); });
+    var existing = ST.getById('cases-pin');
+    if (existing) existing.kill();
     var dist = function () { return Math.max(0, track.scrollWidth - vp.clientWidth); };
     gsap.to(track, {
       x: function () { return -dist(); }, ease: 'none',
       scrollTrigger: {
+        id: 'cases-pin',
         trigger: '.cases', start: 'top top', end: function () { return '+=' + dist(); },
         pin: true, scrub: true, invalidateOnRefresh: true, anticipatePin: 1,
         onUpdate: function (self) { bar.style.transform = 'scaleX(' + self.progress.toFixed(4) + ')'; }
