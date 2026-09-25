@@ -17,6 +17,7 @@
 @media (min-width:768px){.hero__facts li+li::before{content:"";width:4px;height:4px;transform:rotate(45deg);background:var(--gold-deep);margin-left:-10px}}
 .hero__scroll{display:none}
 @media (max-width:767px){
+  .hero__manifesto{font-size:clamp(1.9rem,8vw,2.6rem)}
   .hero__actions .btn{flex:1 1 auto}
   .hero__lead{max-width:24em}
 }
