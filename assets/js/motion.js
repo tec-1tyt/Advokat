@@ -192,19 +192,12 @@
        (which can happen before this runs again), so compare against t.trigger, not t.vars.trigger. */
     ScrollTrigger.getAll().forEach(function (t) { if (t.trigger && t.trigger.classList && t.trigger.classList.contains('cases')) t.kill(); });
     var dist = function () { return Math.max(0, track.scrollWidth - vp.clientWidth); };
-    var resync = function (self) {
-      requestAnimationFrame(function () {
-        if (self && self.refresh) self.refresh();
-        if (Site.lenis) Site.lenis.resize();
-      });
-    };
     gsap.to(track, {
       x: function () { return -dist(); }, ease: 'none',
       scrollTrigger: {
         trigger: '.cases', start: 'top top', end: function () { return '+=' + dist(); },
         pin: true, scrub: true, invalidateOnRefresh: true, anticipatePin: 1,
-        onUpdate: function (self) { bar.style.transform = 'scaleX(' + self.progress.toFixed(4) + ')'; },
-        onEnter: resync, onLeave: resync, onEnterBack: resync, onLeaveBack: resync
+        onUpdate: function (self) { bar.style.transform = 'scaleX(' + self.progress.toFixed(4) + ')'; }
       }
     });
   });
