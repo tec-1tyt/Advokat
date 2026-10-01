@@ -43,7 +43,7 @@
       'hero.eyebrow': 'Kolomyia · Ukraine and Ukrainians abroad',
       'hero.role': 'Attorney',
       'hero.name': 'Yurii Potiatynnyk',
-      'manifesto.html': '<span class="ml"><span>Seventeen years on the bench.</span></span> <span class="ml"><em>Now on your side.</em></span>',
+      'manifesto.html': '<span class="ml"><em>Now on your side.</em></span>',
       'hero.lead': 'Civil, criminal and family cases. Property and land documents, civil registry certificates, apostille and translation.',
       'hero.f1': 'Retired judge',
       'hero.f2': 'Licence No. 001751',
